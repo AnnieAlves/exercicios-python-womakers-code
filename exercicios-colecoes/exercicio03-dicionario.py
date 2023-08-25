@@ -2,14 +2,12 @@
 # Se sim, imprima True. Caso contrário, imprima Falso."
 
 meu_dicionario = {
-    'chave1': 10,
-    'chave2': 'Annie',
-    'chave3': None,
-    'chave4': 42.5
+    'chave 1': 10,
+    'chave 2': 'Annie',
+    'chave 3': None,
+    'chave 4': 42.5
 }
 
-for key, value in meu_dicionario.items():
-    print(f"Key: {key}, Value: {value}")
-    
-#O exercício não ficou claro do que precisavamos fazer
 
+for chave, valor in meu_dicionario.items():
+    print(f"A {chave} tem valor?", valor is not None)
