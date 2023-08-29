@@ -3,18 +3,25 @@
 # imprima o número de alunos com média maior ou igual a 7.0.
 
 media_dos_alunos = []
+lista_notas = []
 alunos_acima_da_media = 0;
 
 for aluno in range(10):
-    media_individual = 0
+    lista_notas.append([])
     for nota in range(4):
-        media_individual += float(input(f"Digite a {nota+1}ª nota do {aluno+1}º aluno: "))
-    media_individual /=4
-    media_dos_alunos.append(media_individual)
+        lista_notas[aluno].append(
+            float(
+                input(f"Digite a {nota+1}ª nota do {aluno+1}º aluno: ")
+            )
+        )       
     
-for media in media_dos_alunos:
-    if media >= 7.0:
-        alunos_acima_da_media+=1
+    
+for notas in lista_notas:
+    media_dos_alunos.append(
+        sum(notas) / len(notas)
+    )
+    
+alunos_acima_da_media = sum(1 for media in media_dos_alunos if media >= 7.0)
         
 print(media_dos_alunos)
 print(alunos_acima_da_media)

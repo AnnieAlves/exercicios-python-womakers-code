@@ -4,10 +4,17 @@
 meu_dicionario = {
     'chave 1': 10,
     'chave 2': 'Annie',
-    'chave 3': None,
+    'chave 3': '',
     'chave 4': 42.5
 }
 
 
-for chave, valor in meu_dicionario.items():
-    print(f"A {chave} tem valor?", valor is not None)
+    
+valores_emitidos = all(meu_dicionario.values())
+
+
+print("Todos os valores são verdadeiros?")
+if valores_emitidos:
+    print("True")
+else:
+    print("False")
